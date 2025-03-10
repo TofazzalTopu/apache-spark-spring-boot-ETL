@@ -13,6 +13,10 @@ public class ELTController {
     @Autowired
     private ELTService eltService;
 
+    @GetMapping
+    public String index() {
+        return "Welcome to the ELT controller!";
+    }
     @GetMapping("/run")
     public String runELT() {
         eltService.runELTProcess();
